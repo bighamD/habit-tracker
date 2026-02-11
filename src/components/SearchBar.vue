@@ -7,7 +7,7 @@
         @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
         type="text"
         placeholder="Search habits, activities..."
-        class="flex-1 bg-transparent outline-none text-[15px] font-medium placeholder:text-neutral-600 text-white"
+        class="flex-1 bg-transparent outline-none text-base font-medium placeholder:text-neutral-600 text-white"
       />
     </div>
   </div>
