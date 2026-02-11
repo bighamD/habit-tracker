@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-[#0A0A0A] pb-6">
     <div class="max-w-md mx-auto">
       <!-- Home 页面 -->
-      <div v-if="activeTab === '1'" class="px-6 pb-6">
+      <div v-if="activeTab === '1'" class="px-6 pb-32">
         <Header />
         <SearchBar v-model="searchQuery" />
         <MetricsCard :metrics="metrics" />
@@ -22,7 +22,7 @@
       </div>
 
       <!-- Stats 页面 -->
-      <div v-else-if="activeTab === '2'" class="px-6 pb-6">
+      <div v-else-if="activeTab === '2'" class="px-6 pb-32">
         <h2 class="font-display text-2xl font-bold py-6 text-white">Statistics</h2>
         <div class="card rounded-2xl p-8 text-center">
           <ChartBar :size="64" class="mx-auto text-neutral-600 mb-4" />
@@ -31,7 +31,7 @@
       </div>
 
       <!-- Discover 页面 -->
-      <div v-else-if="activeTab === '3'" class="px-6 pb-6">
+      <div v-else-if="activeTab === '3'" class="px-6 pb-32">
         <h2 class="font-display text-2xl font-bold py-6 text-white">Discover</h2>
         <div class="card rounded-2xl p-8 text-center">
           <Compass :size="64" class="mx-auto text-neutral-600 mb-4" />
@@ -40,7 +40,7 @@
       </div>
 
       <!-- Profile 页面 -->
-      <div v-else-if="activeTab === '4'" class="px-6 pb-6">
+      <div v-else-if="activeTab === '4'" class="px-6 pb-32">
         <h2 class="font-display text-2xl font-bold py-6 text-white">Profile</h2>
         <div class="card rounded-2xl p-8 text-center">
           <User :size="64" class="mx-auto text-neutral-600 mb-4" />
