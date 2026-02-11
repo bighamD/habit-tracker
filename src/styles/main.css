@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0A0A0A] text-white font-sans;
+  }
+}
+
+@layer components {
+  /* 自定义滚动条 */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* 玻璃态效果 - 黑色主题 */
+  .glass {
+    background: rgba(24, 24, 27, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* 卡片样式 - 黑色主题 */
+  .card {
+    @apply rounded-2xl border border-nyc-border bg-nyc-card;
+  }
+
+  /* 平滑过渡 */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* 点击效果 */
+  .press-effect:active {
+    transform: scale(0.98);
+  }
+}
