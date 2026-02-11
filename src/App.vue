@@ -6,18 +6,18 @@
         <Header />
         <SearchBar v-model="searchQuery" />
         <MetricsCard :metrics="metrics" />
-        <HabitsList :habits="habits" @toggle-habit="toggleHabitStatus" />
+        <HabitsList :habits="habits" @toggleHabit="toggleHabitStatus" />
         <WeekView :week-days="weekDays" />
-        <ProgramsList :programs="programs" @select-program="selectProgram" />
+        <ProgramsList :programs="programs" @selectProgram="selectProgram" />
         <ScheduleList
           :schedule="schedule"
           :active-segment="activeSegment"
           @segment-change="activeSegment = $event"
-          @select-schedule="selectSchedule"
+          @selectSchedule="selectSchedule"
         />
         <HelpSection
           :help-items="helpItems"
-          @toggle-expand="toggleHelpExpand"
+          @toggleExpand="toggleHelpExpand"
         />
       </div>
 
@@ -59,7 +59,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, markRaw, type Component } from 'vue'
+import { ref, markRaw } from 'vue'
 import { House, ChartBar, Compass, User } from 'lucide-vue-next'
 import Header from '@/components/Header.vue'
 import SearchBar from '@/components/SearchBar.vue'
@@ -76,8 +76,7 @@ import {
   mockWeekDays,
   mockPrograms,
   mockSchedule,
-  mockHelpItems,
-  mockTabs
+  mockHelpItems
 } from '@/data/mockData'
 import type { HelpItem, Habit } from '@/types'
 

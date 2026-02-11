@@ -30,7 +30,7 @@
         v-for="item in schedule"
         :key="item.id"
         class="card rounded-2xl flex items-center cursor-pointer hover:bg-nyc-border transition-smooth press-effect"
-        @click="$emit('select-schedule', item.id)"
+        @click="$emit('selectSchedule', item.id)"
       >
         <div :class="item.accentColor" class="w-1 h-full flex-shrink-0 rounded-l-2xl"></div>
         <div class="flex-1 p-4 gap-1">

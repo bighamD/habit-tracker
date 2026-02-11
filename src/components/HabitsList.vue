@@ -14,7 +14,7 @@
         :key="habit.id"
         class="flex items-center gap-[14px] px-4 py-4 cursor-pointer hover:bg-nyc-border transition-smooth press-effect"
         :class="{ 'border-t border-nyc-border': index > 0 }"
-        @click="$emit('toggle-habit', habit.id)"
+        @click="$emit('toggleHabit', habit.id)"
       >
         <!-- 状态图标 -->
         <div

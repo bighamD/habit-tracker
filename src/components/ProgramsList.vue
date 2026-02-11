@@ -12,7 +12,7 @@
         v-for="program in programs"
         :key="program.id"
         class="card rounded-[20px] flex-shrink-0 w-[200px] cursor-pointer hover:bg-nyc-border transition-smooth press-effect"
-        @click="$emit('select-program', program.id)"
+        @click="$emit('selectProgram', program.id)"
       >
         <!-- 渐变图片区域 -->
         <div :class="program.gradient" class="h-[100px]"></div>

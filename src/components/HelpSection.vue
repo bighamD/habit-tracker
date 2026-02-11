@@ -10,7 +10,7 @@
         <!-- 头部 -->
         <button
           class="w-full flex items-center justify-between px-[18px] py-[18px] hover:bg-nyc-border transition-smooth"
-          @click="$emit('toggle-expand', item.id)"
+          @click="$emit('toggleExpand', item.id)"
         >
           <span class="text-[15px] font-semibold text-white">{{ item.text }}</span>
           <ChevronDown
